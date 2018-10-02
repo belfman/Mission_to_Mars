@@ -10,12 +10,11 @@ def scrape__():
   
     # set path for chrome broswer to open a blank chrome page
     executable_path = {'executable_path': 'chromedriver.exe'}
-    browser = Browser('chrome', **executable_path, headless = False)
+    browser = Browser('chrome', **executable_path, headless = True)
 
     # set up empty dicts to append
     mars_data = {}
 
-# 
 # .___  ___.      ___      .______          _______.   .__   __.  ___________    __    ____   _______.
 # |   \/   |     /   \     |   _  \        /       |   |  \ |  | |   ____\   \  /  \  /   /  /       |
 # |  \  /  |    /  ^  \    |  |_)  |      |   (----`   |   \|  | |  |__   \   \/    \/   /  |   (----`
@@ -146,7 +145,7 @@ def scrape__():
     # VALLES MARINERIS
     # set up chrome driver
     executable_path = {'executable_path': 'chromedriver.exe'}
-    browser = Browser('chrome', **executable_path, headless=False)
+    browser = Browser('chrome', **executable_path, headless=True)
 
     # set up connection to url and click on link
     hemisphere_url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
@@ -172,7 +171,7 @@ def scrape__():
     # CERBERUS HEMISPHERE
     # set up chrome driver
     executable_path = {'executable_path': 'chromedriver.exe'}
-    browser = Browser('chrome', **executable_path, headless=False)
+    browser = Browser('chrome', **executable_path, headless=True)
 
     # set up connection to url and click on link
     hemisphere_url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
@@ -198,7 +197,7 @@ def scrape__():
     #SCHIAPARELLI HEMISPHERE
     # set up chrome driver
     executable_path = {'executable_path': 'chromedriver.exe'}
-    browser = Browser('chrome', **executable_path, headless=False)
+    browser = Browser('chrome', **executable_path, headless=True)
 
     # set up connection to url and click on link
     hemisphere_url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
@@ -224,7 +223,7 @@ def scrape__():
     # SYRTIS MAJOR HEMISPHERE
     # set up chrome driver
     executable_path = {'executable_path': 'chromedriver.exe'}
-    browser = Browser('chrome', **executable_path, headless=False)
+    browser = Browser('chrome', **executable_path, headless=True)
 
     # set up connection to url and click on link
     hemisphere_url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
@@ -247,7 +246,8 @@ def scrape__():
     # append dict to hemispheres list
     hemispheres_list.append(syrtis)
 
-    hemispheres_list
-    
-    print(mars_data)
+    mars_data["hemispheres_list"] = hemispheres_list
+
+    return mars_data
+    # print(mars_data)
 scrape__()
